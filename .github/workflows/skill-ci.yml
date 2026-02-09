@@ -1,0 +1,17 @@
+name: skill-ci
+
+on:
+  pull_request:
+    branches:
+      - version/v1
+      - version/v2
+      - version/v3
+      - version/v4
+      - version/v5
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: echo "skill ci ok"
